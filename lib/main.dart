@@ -57,9 +57,12 @@ class _MyTodoListState extends State<MyTodoListPage> {
       backgroundColor: Colors.grey[300],
       appBar: const TodoAppBar(),
       body: Stack(children: [
-          TodoList(
-            todos: todos,
-            onTodoTap: removeTodoAndSetTextField,
+          Padding(
+            padding: const EdgeInsets.only(bottom: 80.0),
+            child: TodoList(
+              todos: todos,
+              onTodoTap: removeTodoAndSetTextField,
+            ),
           ),
         Align(
             alignment: Alignment.bottomCenter,
