@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_list/models/todo.dart';
 import 'app_bar.dart';
 import 'todo_list.dart';
 import 'text_input.dart';
@@ -34,19 +35,19 @@ class MyTodoListPage extends StatefulWidget {
 }
 
 class _MyTodoListState extends State<MyTodoListPage> {
-  List<String> todos = [];
+  List<Todo> todos = [];
   String? selectedTodo;
 
-  void addTodo(String todo) {
+  void addTodo(Todo todo) {
     setState(() {
       selectedTodo = null;
       todos.add(todo);
     });
   }
-  void removeTodoAndSetTextField(String todo) {
+  void removeTodoAndSetTextField(Todo todo) {
     setState(() {
       todos.remove(todo);
-      selectedTodo = todo;
+      selectedTodo = todo.text;
     });
   }
 

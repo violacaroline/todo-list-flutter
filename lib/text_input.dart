@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:todo_list/models/todo.dart';
 
 class TextInputWidget extends StatefulWidget {
-  final Function(String) onPressed;
+  final Function(Todo) onPressed;
   final String? selectedTodo;
 
   const TextInputWidget({Key? key, required this.onPressed, required this.selectedTodo}) : super(key: key);
@@ -67,7 +68,7 @@ class TextInputWidgetState extends State<TextInputWidget> {
           ),
           child: ElevatedButton(
             onPressed: () {
-              String todo = textEditingController.text;
+              Todo todo = Todo(id: DateTime.now().millisecondsSinceEpoch.toString(),text: textEditingController.text);
               textEditingController.clear();
               widget.onPressed(todo); // Use the widget's onPressed callback
             },

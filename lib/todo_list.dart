@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'models/todo.dart';
 
 class TodoList extends StatefulWidget {
-  final List<String> todos;
-  final Function(String todo) onTodoTap;
+  final List<Todo> todos;
+  final Function(Todo todo) onTodoTap;
 
   const TodoList({Key? key, required this.todos, required this.onTodoTap}) : super(key: key);
 
@@ -13,7 +14,6 @@ class TodoList extends StatefulWidget {
 class _TodoListState extends State<TodoList> {
   @override
   Widget build(BuildContext context) {
-    print(widget.todos); // Log the todos list
 
     return Column(
       children: [
@@ -28,7 +28,7 @@ class _TodoListState extends State<TodoList> {
                     borderRadius: BorderRadius.circular(20)
                   ),
                 leading: const Icon(Icons.list_alt),
-                title: Text(widget.todos[index]),
+                title: Text(widget.todos[index].text),
                 onTap: () {
                   widget.onTodoTap(widget.todos[index]);
                 },
