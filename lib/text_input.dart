@@ -13,7 +13,6 @@ class TextInputWidget extends StatefulWidget {
 class TextInputWidgetState extends State<TextInputWidget> {
   TextEditingController textEditingController = TextEditingController();
 
-
   @override
   void dispose() {
     textEditingController.dispose();

@@ -27,7 +27,7 @@ class _TodoListState extends State<TodoList> {
                 shape: RoundedRectangleBorder (
                     borderRadius: BorderRadius.circular(20)
                   ),
-                leading: const Icon(Icons.check_box_outline_blank),
+                leading: const Icon(Icons.list_alt),
                 title: Text(widget.todos[index]),
                 onTap: () {
                   widget.onTodoTap(widget.todos[index]);

@@ -38,8 +38,8 @@ class _MyTodoListState extends State<MyTodoListPage> {
   String? selectedTodo;
 
   void addTodo(String todo) {
-    print('The todo: $todo');
     setState(() {
+      selectedTodo = null;
       todos.add(todo);
     });
   }
