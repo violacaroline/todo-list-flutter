@@ -52,7 +52,7 @@ class TextInputWidgetState extends State<TextInputWidget> {
               borderRadius: BorderRadius.circular(10),
             ),
             child: TextField(
-              controller: textEditingController, // Set the controller
+              controller: textEditingController,
               decoration: const InputDecoration(
                 hintText: 'Add new To-Do',
                 border: InputBorder.none,
