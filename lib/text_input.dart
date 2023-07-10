@@ -70,7 +70,7 @@ class TextInputWidgetState extends State<TextInputWidget> {
             onPressed: () {
               Todo todo = Todo(id: DateTime.now().millisecondsSinceEpoch.toString(),text: textEditingController.text);
               textEditingController.clear();
-              widget.onPressed(todo); // Use the widget's onPressed callback
+              widget.onPressed(todo);
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.amber,
